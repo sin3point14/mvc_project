@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/style2.css">
+<link rel="stylesheet" href="/css/styleQues.css">
+  <title>quiz1o1</title>
+</head>
+
+
+<body>
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()" style="text-align:center;"><h5>Collapse &times</h5></button>
+  <img src="user.jpg" height="200" width="200" style="border-radius:50%;"><br><br><br>
+
+
+  <div style='text-align:center;'>{{navbar[0]}} <br><i>(@{{navbar[1]}})</i></div><br><br><div style='text-align:center'>{{navbar[2]}} Points</div>
+
+
+
+  <a href="/user" style="text-align:center;margin-top:60px;" class="w3-bar-item w3-button"><h3>Home</h3></a>
+  <a href="/question" style="text-align:center;" class="w3-bar-item w3-button"><h3>Questions</h3></a>
+  <a href="/leaderboard" style="text-align:center;" class="w3-bar-item w3-button"><h3>Leaderboard</h3></a>
+
+  {% if navbar[3]==1 %}
+    <a href="/admin" style="text-align:center;" class="w3-bar-item w3-button"><h3>Admin Panel</h3></a>;
+  {% endif %}
+
+
+</div>
+<div id="main">
+<button id="openNav" class="w3-button w3-teal w3-xlarge" style="position: absolute;background-color: #2196F3" onclick="w3_open()">&#9776;</button>
+
+
+<div class="container">
+  <div class="q">
+    <p class="title"><span id="qid" class="qno">{{question.qid}}</span>{{ question.title }}</p>
+  <div id="question">{{ question.q }}</div><div class="hline"></div>
+  <ul>
+  <li><input type="radio" name="mcq" id="o1" value="1" checked/><label for="o1">{{ question.o1 }}</label><div class="check"><div class="inside"></div></div></li>
+  <li><input type="radio" name="mcq" id="o2" value="2"/><label for="o2">{{ question.o2 }}</label><div class="check"><div class="inside"></div></div></li>
+  <li><input type="radio" name="mcq" id="o3" value="3"/><label for="o3">{{ question.o3 }}</label><div class="check"><div class="inside"></div></div></li>
+  <li><input type="radio" name="mcq" id="o4" value="4"/><label for="o4">{{ question.o4 }}</label><div class="check"><div class="inside"></div></div></li>
+  </ul><br>
+  <div class="points">Points- {{ question.points }}</div>
+  <button id="submit" onclick="submi()">submit</button>
+</div>
+<div id="added"></div>
+</div>
+</div>
+<script src="/js/scriptQues.js"></script>
+<script src="/js/navbar.js"></script>
+</body>
+</html>

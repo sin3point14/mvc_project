@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>{{ title }}</title>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<h1>{{ title }}</h1>
+<br>
+<form action="/signup" method="POST">
+<input type="text" name="username" placeholder="Name">
+<br>
+<input type="password" name="password" placeholder="Password">
+<br>
+<input type="submit" value="submit">
+</form>
+<br>
+{{ error }}
+</body>
+</html>

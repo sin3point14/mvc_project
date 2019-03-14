@@ -1,0 +1,44 @@
+  .w3-button:hover{
+    background-color:#2196f354!important;
+  }
+  #openNav{
+    position: absolute;
+    background-color: #2196F3!important;
+  }
+  #openNav:hover{
+    color: #2196F3!important;
+    background-color: white!important;
+  }
+  #main{
+  	font-family: arial;
+     display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+  .container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+ }
+ .leader{
+ 	font-size: 40px;
+ 	padding: 30px;
+ 	background-color:#2196F3;	
+ 	color: white; 
+ }
+ .container p{
+    background-color: #ddffff;
+    padding: 20px;
+    padding-left: 0;s
+  }
+  .container span{
+    background-color: #2196F3;
+    padding: 20px;
+    color: white;
+    margin-right: 20px;
+  }
+  .q_holder{
+    cursor: pointer;
+  }
